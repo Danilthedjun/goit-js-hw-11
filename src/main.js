@@ -14,6 +14,7 @@ function updateGallery(query) {
   const loader = document.createElement('div');
   loader.classList.add('loader');
   form.insertAdjacentElement('afterend', loader);
+  gallery.innerHTML = '';
   getImages(query)
     .then(data => {
       if (data.hits.length === 0) {
